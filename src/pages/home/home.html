@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Medicine Price Registry
+    </ion-title>
+  </ion-navbar>
+  <ion-toolbar no-border-top>
+    <ion-searchbar color="primary" [(ngModel)]="queryText" (ionInput)="updateList()" placeholder="Search">
+    </ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list inset>
+    <button ion-item *ngFor="let item of items" (click)="itemSelected(item)">
+    {{ item.name }}
+  </button>
+  </ion-list>
+
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data..."></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>
