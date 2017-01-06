@@ -1,8 +1,13 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="primary">
     <ion-title>
       Medicine Price Registry
     </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="openSettingsPage()">
+        <ion-icon name="settings"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
   <ion-toolbar no-border-top>
     <ion-searchbar color="primary" [(ngModel)]="queryText" (ionInput)="updateList()" placeholder="Search">
@@ -11,10 +16,34 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-list inset>
-    <button ion-item *ngFor="let item of items" (click)="itemSelected(item)">
-    {{ item.name }}
-  </button>
+  <ion-list no-lines *ngFor="let item of items" (click)="itemSelected(item)">
+
+    <ion-item>
+      <ion-avatar item-left>
+        <button ion-fab>{{ item.name | namefilter}}</button>
+      </ion-avatar>
+      <h2>{{ item.name }}</h2>
+      <p>ingredients: {{item.ingredients[0].name}},</p>
+      <p>{{item.ingredients[0].strength}} strength, </p>
+      <p>{{item.ingredients[0].unit}}</p>
+    </ion-item>
+
+    <ion-row>
+      <ion-col>
+        <button ion-button icon-left clear small>
+        <ion-icon name="pricetags"></ion-icon>
+        <div>{{item.sep}}</div>
+      </button>
+      </ion-col>
+      <ion-col center text-center>
+        <ion-note>
+          pack size: {{item.pack_size}}
+        </ion-note>
+        <hr/>
+      </ion-col>
+
+    </ion-row>
+
   </ion-list>
 
   <ion-infinite-scroll (ionInfinite)="doInfinite($event)">

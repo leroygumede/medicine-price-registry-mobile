@@ -1,10 +1,15 @@
-# README #
+# Medicine Price Registry
+<img src="/resources/header.png" width="150"> 
 
-## Technologies ##
+> “project” :           Medicine Price Registry
+> “project_category” :  medical
+> “app_name”:           MPR
+> “version” :           0.0.2
 
-This App was built using [ionic 2 Framework ](http://ionicframework.com/)
-* Typescript
-* Angularjs2
+### App version
+* Framework:  Ionic 2
+* Version:    "version": "1.3.1"
+* Platforms:  IOS , ANDROID , WINDOWS
 
 ## What is the application about ? ##
 Did you know that medicine prices are regulated in South Africa? Using this application you can:
@@ -13,62 +18,56 @@ Did you know that medicine prices are regulated in South Africa? Using this appl
     * Find possible generics for a branded medicine. Ask your doctor if these medicines are viable alternatives.
     * Ensure that you are not being overcharged for your medicine.
 
+## Installing
 
-## Installation ##
+```bash
+npm install -g ionic
+```
+
+*Note: For a global install of `-g ionic`, OSX/Linux users may need to prefix the command with `sudo` or can setup [proper file permissions on OSX for npm](http://www.johnpapa.net/how-to-use-npm-global-without-sudo-on-osx/) to install without `sudo`. *
 
 
-## What is this repository for? ##
+## Starting an Ionic App
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+Install packages
 
-## How do I get set up? ##
+    npm install
+    bower install
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+To Run app
 
-## Contribution guidelines ##
+```bash
+ionic serve
+``` 
 
-* Writing tests
-* Code review
-* Other guidelines
+### Services
 
-## API ##
+Current Version: V1
 We get all our API's from [code4sa](https://mpr.code4sa.org/)
 
-**Searching**
-```
-#!api
-
+For more information you can visit thier repo
+https://github.com/Code4SA/medicine-price-registry
+Example:
+```bash
 https://mpr.code4sa.org/api/search-lite?q=lamictin
 ```
 
-**Get Product**
-```
-#!api
 
-https://mpr.code4sa.org/api/detail?product=3841
-```
+### Unit Testing
 
-```
-#!api
+Coming soon
 
-https://mpr.code4sa.org/api/related?product=3841
-```
+### Having any issues ?
 
-**SQL Dump**
-```
-#!api
+If you are having any issues please open a new issue. pull requests are welcome :) 
 
-https://mpr.code4sa.org/api/dump
-```
+### App Preview
 
-## Where to get Icons ##
+- All app preview screenshots were taken by running `ionic serve`
 
-* http://www.freepik.com/free-icons/medical
-* http://www.flaticon.com/free-icon/pill_26422
+<img src="/resources/screenshots/android(about).png" width="200">
+<img src="/resources/screenshots/android(details).png" width="200">
+<img src="/resources/screenshots/android(home).png" width="200">
+<img src="/resources/screenshots/android(settings).png" width="200">
+
+- To see more images of the app, check out [screenshots directory](https://github.com/leroygumede/medicine-price-registry-mobile/tree/master/resources/screenshots)!

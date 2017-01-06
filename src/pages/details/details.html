@@ -6,7 +6,57 @@
 </ion-header>
 
 <ion-content padding>
-  <h3> {{item.name}}</h3>
-  <p>dosage_form {{item.dosage_form}}</p>
-  <p>Price {{item.sep}}</p>
+  <!--http://www.flaticon.com/categories/medical/4-->
+  <ion-card>
+    <img class="headerImage" src="./assets/medic/{{imageHeader}}.svg" />
+    <ion-card-content>
+      <ion-card-title>
+        <h1 class="title"> {{item.name}} </h1>
+      </ion-card-title>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col width-50>Dosage form</ion-col>
+          <ion-col width-50> {{item.dosage_form}}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col width-50>Price</ion-col>
+          <ion-col width-50> {{item.sep}}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col width-50>Generic</ion-col>
+          <ion-col width-50> {{item.is_generic}}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col width-50>Packs</ion-col>
+          <ion-col width-50> {{item.num_packs}}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col width-50>Size</ion-col>
+          <ion-col width-50> {{item.pack_size}}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col width-50>Registraction Number</ion-col>
+          <ion-col width-50> {{item.regno}}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col width-50>ingredients</ion-col>
+        </ion-row>
+
+
+        <ion-row>
+          <ion-col width-100>
+            <ion-list no-lines *ngFor="let ingredient of item.ingredients">
+              <p ion-item>
+                {{ ingredient.name }} <br/> 0.0125 {{ ingredient.unit }}
+              </p>
+            </ion-list>
+          </ion-col>
+        </ion-row>
+
+
+
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

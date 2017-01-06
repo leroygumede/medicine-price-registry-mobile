@@ -6,6 +6,7 @@ import { MedicApi } from '../../providers/medic-api'
 
 //Pages
 import { DetailsPage } from '../details/details';
+import { SettingsPage } from '../settings/settings';
 
 @Component({
   selector: 'page-home',
@@ -69,5 +70,9 @@ export class HomePage {
 
   itemSelected(item) {
     this.navCtrl.push(DetailsPage, { 'item': item });
+  }
+
+  openSettingsPage() {
+    this.navCtrl.push(SettingsPage);
   }
 }
