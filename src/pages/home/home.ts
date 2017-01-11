@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { App, NavController } from 'ionic-angular';
 
-//Sevices
+// Providers
 import { MedicApi } from '../../providers/medic-api'
 
 //Pages
