@@ -36,15 +36,16 @@ export class MyApp {
 
     //--------------------------------
     // Check if the user has already seen the tutorial
-    this.storage.get('hasSeenTutotial')
-      .then((hasSeenTutotial) => {
-        if (hasSeenTutotial) {
-          this.rootPage = HomePage;
-        } else {
-          this.rootPage = TutorialPage;
-        }
-        this.platformReady()
-      })
+    this.rootPage = HomePage;
+    // this.storage.get('hasSeenTutotial')
+    //   .then((hasSeenTutotial) => {
+    //     if (hasSeenTutotial) {
+    //       this.rootPage = HomePage;
+    //     } else {
+    //       this.rootPage = TutorialPage;
+    //     }
+    //     this.platformReady()
+    //   })
 
     // load the conference data
     medicApi.load();

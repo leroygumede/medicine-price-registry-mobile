@@ -14,3 +14,20 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+// Fonts
+@font-face {
+    font-family: 'ZagBold';
+    font-style: normal;
+    src:  url('../assets/fonts/ZagBold.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'ZagRegular';
+    font-style: normal;
+    src:  url('../assets/fonts/ZagRegular.otf') format('truetype');
+}
+
+// Global Fonts
+* {
+    font-family: 'ZagBold';
+}
