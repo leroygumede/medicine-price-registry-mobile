@@ -55,7 +55,11 @@ https://mpr.code4sa.org/api/search-lite?q=lamictin
 
 ### Unit Testing
 
-Coming soon
+Running lint:
+Example:
+```bash
+npm run lint
+```
 
 ### Having any issues ?
 

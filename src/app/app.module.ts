@@ -1,11 +1,13 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
+import { Storage } from '@ionic/storage';
 
 // Pages
 import { HomePage } from '../pages/home/home';
 import { DetailsPage } from '../pages/details/details';
 import { SettingsPage } from '../pages/settings/settings';
+import { TutorialPage } from '../pages/tutorial-page/tutorial-page'
 
 // Providers
 import { MedicApi } from '../providers/medic-api';
@@ -20,7 +22,8 @@ import { NameFilter } from '../pipes/name-filter';
     HomePage,
     DetailsPage,
     NameFilter,
-    SettingsPage
+    SettingsPage,
+    TutorialPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -30,8 +33,9 @@ import { NameFilter } from '../pipes/name-filter';
     MyApp,
     HomePage,
     DetailsPage,
-    SettingsPage
+    SettingsPage,
+    TutorialPage
   ],
-  providers: [{ provide: ErrorHandler, useClass: IonicErrorHandler }, MedicApi, DosageImage, NameFilter]
+  providers: [{ provide: ErrorHandler, useClass: IonicErrorHandler }, MedicApi, DosageImage, NameFilter, Storage]
 })
 export class AppModule { }

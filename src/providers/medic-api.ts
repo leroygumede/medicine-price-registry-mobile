@@ -6,17 +6,26 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/observable/of';
 
+// Native
+import { Events } from 'ionic-angular';
+import { Storage } from '@ionic/storage';
+
 @Injectable()
 export class MedicApi {
   data: any;
+  connection_mode = 'IsOnline';
+  hasSeenTutotial = 'hasSeenTutorial';
 
-  constructor(public http: Http) { }
+  constructor(
+    public http: Http,
+    public events: Events,
+    public storage: Storage) { }
 
   load(): any {
     if (this.data) {
       return Observable.of(this.data);
     } else {
-      return this.http.get('assets/data/code4saApi.json')
+      return this.http.get('assets/data/code4saApi.json') //offline
         .map(this.processData);
     }
   }
@@ -53,5 +62,34 @@ export class MedicApi {
       }
     });
   }
+
+
+
+  enableOfflineMode() {
+    this.storage.set(this.connection_mode, false);
+    this.events.publish('user:offline');
+  }
+
+  enableOnlineMode() {
+    this.storage.set(this.connection_mode, true);
+    this.events.publish('user:online');
+  }
+
+  getMode() {
+    return this.storage.get('connection_mode').then((value) => {
+      return value;
+    });
+  }
+  setmode(status) {
+    return this.storage.set('connection_mode', status).then((value) => {
+      return value;
+    });
+  }
+
+  checkHasSeenTutorial() {
+    return this.storage.get(this.hasSeenTutotial).then((value) => {
+      return value;
+    })
+  };
 
 }
