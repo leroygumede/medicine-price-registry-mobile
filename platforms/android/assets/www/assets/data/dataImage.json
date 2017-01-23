@@ -1,0 +1,207 @@
+[
+    {
+        "name": "liquid",
+        "id": "Liq",
+        "image": "liquid"
+    },
+    {
+        "name": "tablet",
+        "id": "Tab",
+        "image": "pill"
+    },
+    {
+        "name": "capsule",
+        "id": "Cap",
+        "image": "pills"
+    },
+    {
+        "name": "capsule",
+        "id": "Cps",
+        "image": "pills"
+    },
+    {
+        "name": "ointment",
+        "id": "Oin",
+        "image": "ointment"
+    },
+    {
+        "name": "lotion",
+        "id": "Lit",
+        "image": "ointment"
+    },
+    {
+        "name": "lotion",
+        "id": "Lot",
+        "image": "ointment"
+    },
+    {
+        "name": "injection",
+        "id": "Inj",
+        "image": "syringe"
+    },
+    {
+        "name": "syrup",
+        "id": "Syr",
+        "image": "liquid"
+    },
+    {
+        "name": "effervescent tablet",
+        "id": "Dsp",
+        "image": "pill"
+    },
+    {
+        "name": "effervescent tablet",
+        "id": "Eft",
+        "image": "pill"
+    },
+    {
+        "name": "drops",
+        "id": "Ear",
+        "image": "eye-drops"
+    },
+    {
+        "name": "drops",
+        "id": "Drp",
+        "image": "eye-drops"
+    },
+    {
+        "name": "drops",
+        "id": "Opd",
+        "image": "eye-drops"
+    },
+    {
+        "name": "vial",
+        "id": "Udv",
+        "image": "vials"
+    },
+    {
+        "name": "suspension",
+        "id": "Sus",
+        "image": "medicine"
+    },
+    {
+        "name": "suspension",
+        "id": "Susp",
+        "image": "medicine"
+    },
+    {
+        "name": "calasthetic",
+        "id": "Cal",
+        "image": "medicine"
+    },
+    {
+        "name": "solution",
+        "id": "Sol",
+        "image": "medicine"
+    },
+    {
+        "name": "solution",
+        "id": "Sln",
+        "image": "medicine"
+    },
+    {
+        "name": "nebuliser",
+        "id": "Neb",
+        "image": "medicine"
+    },
+    {
+        "name": "inhaler",
+        "id": "Inh",
+        "image": "inhaler"
+    },
+    {
+        "name": "inhaler",
+        "id": "Spo",
+        "image": "inhaler"
+    },
+    {
+        "name": "infusion",
+        "id": "Inf",
+        "image": "antibiotic"
+    },
+    {
+        "name": "chewing Gum",
+        "id": "Chg",
+        "image": "antibiotic"
+    },
+    {
+        "name": "vacutainer",
+        "id": "Vac",
+        "image": "drugs"
+    },
+    {
+        "name": "vaginal gel",
+        "id": "Vag",
+        "image": "ointment"
+    },
+    {
+        "name": "gel",
+        "id": "Jel",
+        "image": "ointment"
+    },
+    {
+        "name": "eye ointment",
+        "id": "Eyo",
+        "image": "ointment"
+    },
+    {
+        "name": "vaginal cream",
+        "id": "Vat",
+        "image": "ointment"
+    },
+    {
+        "name": "injection",
+        "id": "Poi",
+        "image": "syringe"
+    },
+    {
+        "name": "powder",
+        "id": "Ped",
+        "image": ""
+    },
+    {
+        "name": "powder",
+        "id": "Pow",
+        "image": "powder"
+    },
+    {
+        "name": "powder",
+        "id": "Por",
+        "image": "powder"
+    },
+    {
+        "name": "sachet",
+        "id": "Sac",
+        "image": "pills"
+    },
+    {
+        "name": "suppository",
+        "id": "Sup",
+        "image": "pills"
+    },
+    {
+        "name": "cream",
+        "id": "Cre",
+        "image": "ointment"
+    },
+    {
+        "name": "patch",
+        "id": "Ptd",
+        "image": "ointment"
+    },
+    {
+        "name": "penset",
+        "id": "Ped",
+        "image": "ointment"
+    },
+    {
+        "name": "tablet",
+        "id": "Ect",
+        "image": "pill"
+    },
+    {
+        "name": "spray",
+        "id": "Nas",
+        "image": "spray"
+    }
+]
