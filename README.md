@@ -6,6 +6,8 @@
 > “app_name”:           MPR
 > “version” :           0.0.2
 
+[![Build Status](https://www.bitrise.io/app/b17cd3501045555d.svg?token=KP-m32iRCMogowPEEGFxkA)](https://www.bitrise.io/app/b17cd3501045555d)
+
 ### App version
 * Framework:  Ionic 2
 * Version:    "version": "1.3.1"
