@@ -49,7 +49,7 @@ export class HomePage {
 
 
   doInfinite(infiniteScroll) {
-    console.log('Begin async operation');
+    // console.log('Begin async operation');
     if (this.medItems.length ! > this.icounter) {
       setTimeout(() => {
         for (let i = this.icounter; i < this.icounter + this.maxNames; i++) {
@@ -59,7 +59,7 @@ export class HomePage {
 
         }
         this.icounter += this.maxNames;
-        console.log('Async operation has ended');
+        // console.log('Async operation has ended');
         infiniteScroll.complete();
       }, 500);
     } else {

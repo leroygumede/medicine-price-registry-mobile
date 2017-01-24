@@ -21,7 +21,6 @@ dist/
 node_modules/
 tmp/
 temp/
-res/
 .bitrise*
 $RECYCLE.BIN/
 

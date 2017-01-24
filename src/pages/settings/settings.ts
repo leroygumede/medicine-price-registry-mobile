@@ -95,7 +95,6 @@ export class SettingsPage {
   getModeStatus() {
     this.medicapi.getMode()
       .then((result) => {
-        console.log('The current status: ' + result);
         if (result === false) {
           this.routerState = false;
           this.statusState = true;

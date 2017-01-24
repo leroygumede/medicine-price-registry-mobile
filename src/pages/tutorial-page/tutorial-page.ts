@@ -22,7 +22,7 @@ export class TutorialPage {
     public storage: Storage) { }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad TutorialPage');
+    // console.log('ionViewDidLoad TutorialPage');
   }
 
   startApp() {

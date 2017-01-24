@@ -13,7 +13,7 @@ import { Storage } from '@ionic/storage';
 @Injectable()
 export class MedicApi {
   data: any;
-  connection_mode = 'IsOnline';
+  connectionMode = 'IsOnline';
   hasSeenTutotial = 'hasSeenTutorial';
 
   constructor(
@@ -66,12 +66,12 @@ export class MedicApi {
 
 
   enableOfflineMode() {
-    this.storage.set(this.connection_mode, false);
+    this.storage.set(this.connectionMode, false);
     this.events.publish('user:offline');
   }
 
   enableOnlineMode() {
-    this.storage.set(this.connection_mode, true);
+    this.storage.set(this.connectionMode, true);
     this.events.publish('user:online');
   }
 

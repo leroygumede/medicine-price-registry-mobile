@@ -29,7 +29,7 @@ export class DosageImage {
 
   getImage(requestedImage = '') {
     return this.load().map(data => {
-      let newImage: string = "";
+      let newImage: string = '';
 
       data.forEach((image) => {
 
