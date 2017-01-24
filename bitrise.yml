@@ -1,9 +1,9 @@
+---
 format_version: 1.3.1
 default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
 app:
   envs:
-  # for iOS
-  - BITRISE_PROJECT_PATH: ./platforms/ios/medic.xcodeproj
+  - BITRISE_PROJECT_PATH: "./platforms/ios/medic.xcodeproj"
   - BITRISE_SCHEME: medicine-price-registry-mobile
   - FORCE_TEAM_ID: 72SA8V3WYL
 workflows:
@@ -17,6 +17,7 @@ workflows:
         run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
     - git-clone@3.4.1: {}
   build-android:
+    steps:
     - script@1.1.3:
         title: Build the app for distribution
         inputs:
@@ -32,11 +33,6 @@ workflows:
           opts: {}
   build-ios:
     steps:
-    - change-workdir@1.0.1:
-        title: Change workdir to ionic project dir
-        inputs:
-        - path: $IONIC_PROJ_DIR_PATH
-        - is_create_path: "false"
     - script@1.1.3:
         title: Build the app for distribution
         inputs:
@@ -50,11 +46,11 @@ workflows:
             ionic build ios --prod
     - recreate-user-schemes:
         inputs:
-        - project_path: $BITRISE_PROJECT_PATH
+        - project_path: "$BITRISE_PROJECT_PATH"
     - certificate-and-profile-installer@1.8.2: {}
     - xcode-archive@2.0.4:
         inputs:
-        - force_team_id: $FORCE_TEAM_ID
+        - force_team_id: "$FORCE_TEAM_ID"
         - force_code_sign_identity: iPhone Developer
   ci-ios:
     before_run:
